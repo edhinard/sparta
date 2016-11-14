@@ -19,9 +19,14 @@ except:
 	print "[-] Import failed. Elixir library not found. \nTry installing it with: apt-get install python-elixir"
 	exit(0)
 try:	
-	from PyQt4 import QtGui, QtCore, QtWebKit
+	from PyQt4 import QtGui, QtCore
 except:
 	print "[-] Import failed. PyQt4 library not found. \nTry installing it with: apt-get install python-qt4"
+	exit()
+try:
+	from PySide import QtWebKit
+except:
+	print "[-] Import failed. QtWebkit library not found. \nTry installing it with: apt-get install python-pyside.qtwebkit"
 	exit()
 	
 from app.logic import *

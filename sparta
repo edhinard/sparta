@@ -1,2 +1,2 @@
 #!/bin/bash
-cd /usr/share/sparta/ && python sparta.py
+cd `dirname $(readlink -f $0)` && python sparta.py
